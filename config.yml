@@ -34,20 +34,24 @@ homebrew_taps:
 #  - aws/tap
 
 homebrew_apps:
+  - alfred
   - anydesk
+  - appcleaner
   - cleanmymac
   - cleanshot
+  - clipy
   - google-chrome
   - inkdrop
   - minecraft
   - onedrive
+  - slack
   - spotify
   - steam
   - thunderbird
   - typora
   - visual-studio-code
+  - yippy
 #  - 1password
-#  - alfred
 #  - aws-vault
 #  - bartender
 #  - brave-browser
@@ -70,7 +74,6 @@ homebrew_apps:
 #  - sequel-pro
 #  - sonos
 #  - spillo
-#  - slack
 #  - sublime-merge
 #  - sublime-text
 #  - tableplus
@@ -81,12 +84,16 @@ homebrew_apps:
 
 homebrew_packages:
   - curl
+  - docker
+  - gh
   - git
+  - jq
   - lastpass-cli
   - ledger
   - mas
   - openssh
   - python
+  - terraform
   - vim
   - wget
 #  - aws-shell
@@ -96,10 +103,8 @@ homebrew_packages:
 #  - chag
 #  - composer
 #  - fasd
-#  - gh
 #  - httpie
 #  - imagemagick
-#  - jq
 #  - make
 #  - node
 #  - php
