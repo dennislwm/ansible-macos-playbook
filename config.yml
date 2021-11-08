@@ -34,21 +34,24 @@ homebrew_taps:
 #  - aws/tap
 
 homebrew_apps:
-  - alfred
-  - anydesk
+#  - alfred
+#  - anydesk
   - appcleaner
   - cleanmymac
   - cleanshot
   - clipy
+  - duet
   - google-chrome
-  - inkdrop
-  - minecraft
-  - onedrive
+#  - inkdrop
+  - joplin
+#  - minecraft
+#  - onedrive
+  - rectangle
   - slack
-  - spotify
-  - steam
-  - thunderbird
-  - typora
+#  - spotify
+#  - steam
+#  - thunderbird
+#  - typora
   - visual-studio-code
   - yippy
 #  - 1password
@@ -83,23 +86,24 @@ homebrew_apps:
 #  - whatsapp
 
 homebrew_packages:
+  - bash
   - curl
   - docker
   - gh
   - git
   - jq
   - lastpass-cli
-  - ledger
+#  - ledger
   - mas
   - openssh
   - python
   - terraform
+  - tfswitch
   - vim
   - wget
 #  - aws-shell
 #  - awscli
 #  - aws-sam-cli
-#  - bash
 #  - chag
 #  - composer
 #  - fasd
@@ -116,8 +120,8 @@ homebrew_packages:
 #  - zsh
 
 mas_apps:
-  - { name: Moom, id: 419330170 }
-  - { name: Telegram, id: 747648890 }
+#  - { name: Moom, id: 419330170 }
+#  - { name: Telegram, id: 747648890 }
 #  - { name: 1Blocker, id: 1107421413 }
 #  - { name: Bear, id: 1091189122 }
 #  - { name: Pages, id: 409201541 }
