@@ -7,7 +7,7 @@
       include_vars: "{{ item }}"
       with_first_found:
         - files:
-            - config.yml
+            - work_config.yml
             - default.config.yml
           skip: true
       tags: ['always']
