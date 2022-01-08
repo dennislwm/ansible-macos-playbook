@@ -29,6 +29,8 @@ homebrew_taps:
   - homebrew/cask
   - homebrew/cask-drivers
   - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - spring-io/tap
 #  - jeromegamez/formulae
 #  - github/gh
 #  - aws/tap
@@ -37,20 +39,22 @@ homebrew_apps:
   - alfred
   - anydesk
   - appcleaner
+  - calibre
   - cleanmymac
   - cleanshot
   - clipy
   - google-chrome
-  - inkdrop
+  - intellij-idea-ce
+  - joplin
   - minecraft
   - onedrive
   - slack
   - spotify
   - steam
+  - temurin8
   - thunderbird
   - typora
   - visual-studio-code
-  - yippy
 #  - 1password
 #  - aws-vault
 #  - bartender
@@ -64,6 +68,7 @@ homebrew_apps:
 #  - fliqlo
 #  - font-fira-code
 #  - gpg-suite
+#  - inkdrop
 #  - iterm2
 #  - jetbrains-toolbox
 #  - lastpass
@@ -81,18 +86,29 @@ homebrew_apps:
 #  - transmit
 #  - twitch
 #  - whatsapp
+#  - yippy
 
 homebrew_packages:
+  - certbot
   - curl
   - docker
+  - exercism
   - gh
   - git
+  - go
+  - gradle
   - jq
+  - kubectl
   - lastpass-cli
   - ledger
   - mas
+  - maven
+  - minio
   - openssh
   - python
+  - rsync
+  - shellcheck
+  - spring-boot
   - terraform
   - vim
   - wget
