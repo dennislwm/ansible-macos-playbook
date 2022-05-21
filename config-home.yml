@@ -25,6 +25,8 @@ screensaver_ask_for_password_in_seconds: 5
 shell_path: /usr/local/bin/zsh
 
 homebrew_taps:
+  - cloudflare/cloudflare
+  - heroku/brew
   - homebrew/core
   - homebrew/cask
   - homebrew/cask-drivers
@@ -46,8 +48,12 @@ homebrew_apps:
   - google-chrome
   - intellij-idea-ce
   - joplin
+  - licecap
   - minecraft
   - onedrive
+  - postico
+  - postman
+  - shottr
   - slack
   - spotify
   - steam
@@ -89,22 +95,28 @@ homebrew_apps:
 #  - yippy
 
 homebrew_packages:
+  - awscli
   - certbot
+  - cloudflared
   - curl
   - docker
   - exercism
+  - fzf
   - gh
   - git
   - go
   - gradle
+  - heroku
   - jq
   - kubectl
   - lastpass-cli
   - ledger
+  - m1-terraform-provider-helper
   - mas
   - maven
   - minio
   - openssh
+  - pipenv
   - python
   - rsync
   - shellcheck
@@ -113,7 +125,6 @@ homebrew_packages:
   - vim
   - wget
 #  - aws-shell
-#  - awscli
 #  - aws-sam-cli
 #  - bash
 #  - chag
