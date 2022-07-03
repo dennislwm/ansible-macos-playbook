@@ -50,6 +50,7 @@ homebrew_apps:
   - joplin
   - licecap
   - minecraft
+  - netnewswire
   - onedrive
   - postico
   - postman
@@ -61,6 +62,7 @@ homebrew_apps:
   - thunderbird
   - typora
   - visual-studio-code
+  - zerotier-one  
 #  - 1password
 #  - aws-vault
 #  - bartender
