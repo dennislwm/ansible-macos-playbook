@@ -5,10 +5,10 @@ hostname: dbmacm3
 
 finder_proxy_icon_hover_delay: 0
 
-safari_show_full_url_in_address_bar: true
-safari_open_safe_files_automatically: true
-safari_show_status_bar: true
-safari_show_developer_menu: true
+# safari_show_full_url_in_address_bar: true
+# safari_open_safe_files_automatically: true
+# safari_show_status_bar: true
+# safari_show_developer_menu: true
 
 system_save_application_state_on_quit: no
 system_expand_save_panel_by_default: yes
@@ -138,6 +138,7 @@ homebrew_packages:
   - terraform
   - vim
   - wget
+  - yazi
 #  - aws-shell
 #  - aws-sam-cli
 #  - bash
@@ -158,7 +159,7 @@ homebrew_packages:
 
 mas_apps:
   - { name: Moom, id: 419330170 }
-  - { name: Telegram, id: 747648890 }
+#  - { name: Telegram, id: 747648890 }
 #  - { name: 1Blocker, id: 1107421413 }
 #  - { name: Bear, id: 1091189122 }
 #  - { name: Pages, id: 409201541 }

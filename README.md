@@ -16,8 +16,11 @@ This is the playbook I use after a clean install of MacOS to set everything up.
 - [Installation and Configuration](#installation-and-configuration)
 - [Clone the repo and copy the configuration](#clone-the-repo-and-copy-the-configuration)
 - [Copy and edit the configuration to your preference](#copy-and-edit-the-configuration-to-your-preference)
+  - [Configure git profile](#configure-git-profile)
 - [Execution](#execution)
   - [Run ansible-playbook on your config file](#run-ansible-playbook-on-your-config-file)
+- [Post-Execution](#post-execution)
+  - [Mac](#mac)
 - [Reference](#reference)
   - [Acknowledgements](#acknowledgements)
 
@@ -48,6 +51,7 @@ The audience for this document includes:
 |:------------------------------:|:--------------------------------------------:|:--------:|
 | Installation and Configuration |  Clone the repo and copy the configuration   |   R,A    |
 | Installation and Configuration | Configure the config file to your preference |   R,A    |
+| Installation and Configuration |            Configure git profile             |   R,A    |
 |           Execution            |   Run ansible-playbook on your config file   |   R,A    |
 
 ---
@@ -113,6 +117,19 @@ cd ansible-macos-playbook
   - Modifies MacOS settings (Role `settings`)
   - Changes the user shell, if configured (Role `shell`)
 
+7. Taps, Apps, Packages and Mac App Store
+- homebrew_apps:
+  - alt-tab: Alt-tab between windows
+  - google-chrome: Chrome browser
+  - visual-studio-code: Code editor
+  - zerotier-one: Zero trust VPN to private LAN
+- homebrew_packages:
+  - mas: Mac App Store cli to search for name and id of apps
+  - pipenv: Python environment manager
+- mas_apps:
+  - Moom: Window custom layout manager
+  - Wireless@SGx: Free public WiFi hotspots around Singapore
+
 ```yml
 ---
 
@@ -139,14 +156,42 @@ homebrew_taps:
   - homebrew/core
 
 homebrew_apps:
+  - alt-tab
   - google-chrome
   - visual-studio-code
 
 homebrew_packages:
+  - mas
   - pipenv
 
 mas_apps:
   - { name: Moom, id: 419330170 }
+  - { name: Wireless@SGx, id: 1449928544 }
+```
+
+## 5.3. Configure git profile
+
+1. Open a terminal and type `git config --global --edit`.
+
+2. Copy and paste the following content:
+
+```sh
+[core]
+	editor = code --wait
+[user]
+	email = dennislwm@your.email
+	name = Dennis Lee
+[init]
+	defaultBranch = main
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[pull]
+	rebase = false
+[commit]
+	template = /Users/dennislwm/config/commit.txt
 ```
 
 ---
@@ -155,6 +200,13 @@ mas_apps:
 
 1. Run `ansible-playbook main.yml`. Enter your account password when prompted.
    - If you have a configuration stored elsewhere (e.g. in a dotfiles folders), run `ansible-playbook main.yml --extra-vars=@/path/to/my/config.yml`
+
+---
+# 7. Post-Execution
+## 7.1. Mac
+
+1. Turn on sync settings in Visual Studio Code using your GitHub account.
+2. Git clone, install and configure [dotfiles](https://github.com/dennis/bash-alias-custom).
 
 ---
 # 8. Reference
