@@ -49,6 +49,8 @@ homebrew_apps:
 #  - spotify
 
 homebrew_packages:
+  - jq
+  - lastpass-cli
   - mas
   - pipenv
 #  - awscli
@@ -59,9 +61,7 @@ homebrew_packages:
 #  - git
 #  - gitlab-runner
 #  - gradle
-#  - jq
 #  - kubectl
-#  - lastpass-cli
 #  - ledger
 #  - openssh
 #  - rsync
