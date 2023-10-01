@@ -6,23 +6,24 @@ This is the playbook I use after a clean install of MacOS to set everything up.
 
 - [Ansible MacOS Playbook](#ansible-macos-playbook)
 - [Introduction](#introduction)
-  - [Audience](#audience)
+    - [Audience](#audience)
 - [System Overview](#system-overview)
-  - [Benefits and Values](#benefits-and-values)
+    - [Benefits and Values](#benefits-and-values)
 - [User Personas](#user-personas)
-  - [RACI Matrix](#raci-matrix)
+    - [RACI Matrix](#raci-matrix)
 - [Requirements](#requirements)
-  - [Mac](#mac)
+    - [Mac](#mac)
 - [Installation and Configuration](#installation-and-configuration)
 - [Clone the repo and copy the configuration](#clone-the-repo-and-copy-the-configuration)
 - [Copy and edit the configuration to your preference](#copy-and-edit-the-configuration-to-your-preference)
-  - [Configure git profile](#configure-git-profile)
+    - [Configure git profile](#configure-git-profile)
 - [Execution](#execution)
-  - [Run ansible-playbook on your config file](#run-ansible-playbook-on-your-config-file)
+    - [Run ansible-playbook on your config file](#run-ansible-playbook-on-your-config-file)
+    - [Find and automate default user settings for Mac](#find-and-automate-default-user-settings-for-mac)
 - [Post-Execution](#post-execution)
-  - [Mac](#mac)
+    - [Mac](#mac)
 - [Reference](#reference)
-  - [Acknowledgements](#acknowledgements)
+    - [Acknowledgements](#acknowledgements)
 
 <!-- /TOC -->
 
@@ -47,12 +48,13 @@ The audience for this document includes:
 # 3. User Personas
 ## 3.1 RACI Matrix
 
-|            Category            |                   Activity                   | Mac User |
-|:------------------------------:|:--------------------------------------------:|:--------:|
-| Installation and Configuration |  Clone the repo and copy the configuration   |   R,A    |
-| Installation and Configuration | Configure the config file to your preference |   R,A    |
-| Installation and Configuration |            Configure git profile             |   R,A    |
-|           Execution            |   Run ansible-playbook on your config file   |   R,A    |
+|            Category            |                    Activity                     | Mac User |
+|:------------------------------:|:-----------------------------------------------:|:--------:|
+| Installation and Configuration |    Clone the repo and copy the configuration    |   R,A    |
+| Installation and Configuration |  Configure the config file to your preference   |   R,A    |
+| Installation and Configuration |              Configure git profile              |   R,A    |
+|           Execution            |    Run ansible-playbook on your config file     |   R,A    |
+|           Execution            | Find and automate default user settings for Mac |   R,A    |
 
 ---
 # 4. Requirements
@@ -200,6 +202,35 @@ mas_apps:
 
 1. Run `ansible-playbook main.yml`. Enter your account password when prompted.
    - If you have a configuration stored elsewhere (e.g. in a dotfiles folders), run `ansible-playbook main.yml --extra-vars=@/path/to/my/config.yml`
+
+## 6.2. Find and automate default user settings for Mac
+
+1. Open a terminal and type the following command to save current defaults:
+
+```sh
+defaults domains | tr ', ' '\n' > before.txt
+```
+
+2. Open the UI and change a setting. Then type the following command to check diff:
+
+```sh
+defaults domains | tr ', ' '\n' > after.txt
+diff before.txt after.txt
+```
+
+3. Using the changed DOMAIN (application) and KEY above, check type and set the VALUE:
+
+```sh
+defaults read-type DOMAIN KEY
+# type is boolean
+defaults write DOMAIN KEY -bool VALUE
+```
+
+4. Kill any affected DOMAIN (application) to apply the changes:
+
+```sh
+killall DOMAIN 2> /dev/null
+```
 
 ---
 # 7. Post-Execution
