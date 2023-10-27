@@ -33,6 +33,7 @@ homebrew_apps:
   - alt-tab
   - google-chrome
   - joplin
+  - netnewswire
   - slack
   - visual-studio-code
   - zerotier-one
@@ -41,7 +42,6 @@ homebrew_apps:
 #  - cleanshot
 #  - clipy
 #  - licecap
-#  - netnewswire
 #  - onedrive
 #  - postico
 #  - postman
