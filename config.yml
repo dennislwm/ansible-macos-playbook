@@ -32,6 +32,7 @@ homebrew_taps:
 homebrew_apps:
   - alt-tab
   - google-chrome
+  - joplin
   - slack
   - visual-studio-code
   - zerotier-one
@@ -39,7 +40,6 @@ homebrew_apps:
 #  - cleanmymac
 #  - cleanshot
 #  - clipy
-#  - joplin
 #  - licecap
 #  - netnewswire
 #  - onedrive
